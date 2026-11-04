@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sol y Sombra | The History, Craft &amp; Culture of the Sombrero</title>
+  <meta name="description" content="An editorial journal exploring the craftsmanship, regional traditions, weave patterns, and cultural heritage of traditional sombreros across Mexico and Latin America.">
+
+  <!-- Google Fonts: Fraunces (Editorial Serif) & Plus Jakarta Sans (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-canvas: #faf6f0;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f2ebe1;
+      --text-primary: #1f1a17;
+      --text-secondary: #5c5149;
+      --text-muted: #85776c;
+      --accent-terracotta: #b84a27;
+      --accent-terracotta-hover: #96391b;
+      --accent-ochre: #d4943a;
+      --border-hairline: #e4dacb;
+      --shadow-card: 0 4px 20px -2px rgba(31, 26, 23, 0.06), 0 1px 4px -1px rgba(31, 26, 23, 0.04);
+      --shadow-elevated: 0 14px 32px -4px rgba(31, 26, 23, 0.12);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1180px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Accessible Skip Link */
+    .skip-link {
+      position: absolute;
+      inset-block-start: -100px;
+      inset-inline-start: 1rem;
+      background: var(--accent-terracotta);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      inset-block-start: 1rem;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      background-color: var(--bg-canvas);
+      border-block-end: 1px solid var(--border-hairline);
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-block: 1.15rem;
+      padding-inline: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-block-start: 0.15rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.18s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: var(--accent-terracotta);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+    }
+
+    /* Hero Featured Article */
+    .hero-section {
+      padding-block: 3rem 2.5rem;
+      border-block-end: 1px solid var(--border-hairline);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-visual {
+      background: linear-gradient(135deg, #2d231e 0%, #4a3528 55%, #8a4b29 100%);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      color: #faf6f0;
+    }
+
+    .hero-svg-illustration {
+      width: 100%;
+      max-width: 340px;
+      margin-inline: auto;
+      margin-block-end: 1.5rem;
+      display: block;
+    }
+
+    .hero-caption {
+      font-size: 0.8125rem;
+      color: rgba(250, 246, 240, 0.78);
+      border-inline-start: 2px solid var(--accent-ochre);
+      padding-inline-start: 0.75rem;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .category-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-terracotta);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .hero-excerpt {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .btn-primary {
+      align-self: flex-start;
+      margin-block-start: 0.5rem;
+      background-color: var(--accent-terracotta);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding-block: 0.75rem;
+      padding-inline: 1.35rem;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-terracotta-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Filter & Search Bar */
+    .controls-bar {
+      padding-block: 2rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      background-color: var(--bg-subtle);
+      color: var(--text-secondary);
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      padding-block: 0.45rem;
+      padding-inline: 0.95rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hairline);
+    }
+
+    .filter-btn[aria-pressed="true"] {
+      background-color: var(--text-primary);
+      color: var(--bg-canvas);
+    }
+
+    .search-wrapper {
+      flex: 1 1 240px;
+      max-width: 320px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding-block: 0.5rem;
+      padding-inline: 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-hairline);
+      background-color: var(--bg-surface);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+    }
+
+    .search-input:focus {
+      outline: 2px solid var(--accent-terracotta);
+      outline-offset: 1px;
+    }
+
+    /* Content Layout: Articles + Sidebar */
+    .editorial-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      padding-block: 1rem 4rem;
+      align-items: start;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .article-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .card-banner {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background-color: var(--bg-subtle);
+      border-block-end: 1px solid var(--border-hairline);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 0.65rem;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+
+    .card-excerpt {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    .card-footer {
+      margin-block-start: 0.75rem;
+      padding-block-start: 0.75rem;
+      border-block-start: 1px solid var(--border-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: var(--accent-terracotta);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .read-more-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Sidebar Anatomy & Craft Specs */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .sidebar-panel {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .sidebar-heading {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      margin-block-end: 0.85rem;
+      color: var(--text-primary);
+    }
+
+    .glossary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .glossary-item dt {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .glossary-item dd {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-block-start: 0.15rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-block-start: 0.75rem;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+    }
+
+    .newsletter-feedback {
+      font-size: 0.8125rem;
+      color: var(--accent-terracotta);
+      min-height: 1.2em;
+    }
+
+    /* Article Reader Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(31, 26, 23, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 200;
+    }
+
+    .modal-backdrop[aria-hidden="false"] {
+      display: flex;
+    }
+
+    .modal-dialog {
+      background-color: var(--bg-surface);
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-elevated);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      inset-block-start: 1.25rem;
+      inset-inline-end: 1.25rem;
+      background: var(--bg-subtle);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 0.4rem 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .modal-body p {
+      margin-block-start: 1rem;
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    .site-footer {
+      border-block-start: 1px solid var(--border-hairline);
+      background-color: var(--bg-subtle);
+      padding-block: 2.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .editorial-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link" id="skip-to-content-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand" id="brand-home-link">
+        <span class="brand-title">Sol y Sombra</span>
+        <span class="brand-subtitle">Chronicles of the Traditional Sombrero</span>
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#articles-section" class="nav-link" id="nav-origins-link" data-filter="History">History</a></li>
+          <li><a href="#articles-section" class="nav-link" id="nav-craft-link" data-filter="Craftsmanship">Craftsmanship</a></li>
+          <li><a href="#articles-section" class="nav-link" id="nav-regional-link" data-filter="Regional Styles">Regional Styles</a></li>
+          <li><a href="#anatomy-glossary" class="nav-link" id="nav-glossary-link">Anatomy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <!-- Featured Story -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="category-label">Featured Essay &bull; Craftsmanship</span>
+          <h1 id="hero-heading" class="hero-title">Engineered for the High Sun: How the Sombrero de Charro Perfected Shade and Balance</h1>
+          <p class="hero-excerpt">
+            More than a cultural emblem, the wide-brimmed sombrero is a masterclass in vernacular climate engineering—combining high-crown convective cooling with dense felt and palm weaves tailored to equestrian life across the Mexican plateau.
+          </p>
+          <div class="meta-row">
+            <span>By Mateo Valdés</span>
+            <span aria-hidden="true">&bull;</span>
+            <time id="hero-date" datetime="2026-10-28">October 28, 2026</time>
+            <span aria-hidden="true">&bull;</span>
+            <span id="hero-brim-spec">Brim span: 15 cm</span>
+          </div>
+          <button type="button" class="btn-primary" id="hero-read-article-btn" data-article-id="charro-engineering">
+            Read Full Essay
+          </button>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Stylized illustration of a traditional wide-brimmed sombrero with embroidered trim">
+          <svg class="hero-svg-illustration" viewBox="0 0 360 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Crown (Copa) -->
+            <path d="M125 115 C128 42, 152 24, 180 24 C208 24, 232 42, 235 115 Z" fill="#D4943A" stroke="#FAF6F0" stroke-width="3"/>
+            <!-- Crown Pinch (Pedrada) -->
+            <ellipse cx="180" cy="48" rx="22" ry="8" fill="#B84A27" opacity="0.65"/>
+            <!-- Hatband (Toquilla) -->
+            <rect x="124" y="103" width="112" height="12" rx="4" fill="#B84A27" stroke="#FAF6F0" stroke-width="2"/>
+            <!-- Wide Brim (Ala) -->
+            <path d="M18 118 C45 148, 315 148, 342 118 C348 110, 325 102, 235 112 L125 112 C35 102, 12 110, 18 118 Z" fill="#E9B86B" stroke="#FAF6F0" stroke-width="3"/>
+            <!-- Serpentine Embroidery Pattern (Calado) -->
+            <path d="M44 121 Q70 112, 96 121 T148 121 T200 121 T252 121 T304 121" stroke="#B84A27" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <p class="hero-caption">
+            Proportional geometry of a classic Jalisco <em>Sombrero de Charro</em>: elevated <em>copa</em> (crown) with upturned perimeter <em>ala</em> (brim).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <section id="articles-section" aria-label="Filter articles">
+      <div class="controls-bar">
+        <div class="filter-group" role="group" aria-label="Article categories">
+          <button type="button" class="filter-btn" id="filter-all-btn" data-category="All" aria-pressed="true">All Stories</button>
+          <button type="button" class="filter-btn" id="filter-history-btn" data-category="History" aria-pressed="false">History</button>
+          <button type="button" class="filter-btn" id="filter-craft-btn" data-category="Craftsmanship" aria-pressed="false">Craftsmanship</button>
+          <button type="button" class="filter-btn" id="filter-regional-btn" data-category="Regional Styles" aria-pressed="false">Regional Styles</button>
+        </div>
+        <div class="search-wrapper">
+          <input
+            type="search"
+            id="article-search-input"
+            class="search-input"
+            placeholder="Search weaves, regions, or history..."
+            aria-label="Search articles"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Editorial Grid + Sidebar -->
+    <div class="editorial-layout">
+      <section aria-label="Published articles">
+        <div id="articles-grid-container" class="articles-grid"></div>
+      </section>
+
+      <aside class="sidebar" id="anatomy-glossary" aria-label="Sombrero anatomy and newsletter">
+        <div class="sidebar-panel">
+          <h2 class="sidebar-heading">Anatomy of a Sombrero</h2>
+          <dl class="glossary-list">
+            <div class="glossary-item">
+              <dt>La Copa (The Crown)</dt>
+              <dd>The tall central chamber that traps an insulating pocket of air above the wearer's head.</dd>
+            </div>
+            <div class="glossary-item">
+              <dt>El Ala (The Brim)</dt>
+              <dd>The expansive sun-shielding rim, shaped flat or upturned at the edges to deflect wind on horseback.</dd>
+            </div>
+            <div class="glossary-item">
+              <dt>Las Pedradas (The Dents)</dt>
+              <dd>Side indentations pinched into the crown to allow a firm grip and reinforce structural rigidity.</dd>
+            </div>
+            <div class="glossary-item">
+              <dt>El Barboquejo (Chin Cord)</dt>
+              <dd>Braided leather or horsehair strap securing the hat during high-wind riding or <em>charrería</em> events.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="sidebar-panel">
+          <h2 class="sidebar-heading">Field Notes Dispatches</h2>
+          <p style="font-size: 0.875rem; color: var(--text-secondary);">
+            Monthly essays on master hatters, palm-weaving cooperatives, and textile preservation.
+          </p>
+          <form id="newsletter-signup-form" class="newsletter-form">
+            <label for="newsletter-email-input" style="font-size: 0.8125rem; font-weight: 600;">Email Address</label>
+            <input
+              type="email"
+              id="newsletter-email-input"
+              class="newsletter-input"
+              placeholder="artisan@example.com"
+              required
+            >
+            <button type="submit" id="newsletter-submit-btn" class="btn-primary" style="width: 100%; text-align: center;">
+              Subscribe to Journal
+            </button>
+            <p id="newsletter-feedback-msg" class="newsletter-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Reader Modal -->
+  <div id="article-reader-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-article-title">
+    <div class="modal-dialog">
+      <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close article reader">Close &times;</button>
+      <span id="modal-article-category" class="category-label"></span>
+      <h2 id="modal-article-title" class="card-title" style="font-size: 1.65rem; margin-block-start: 0.35rem;"></h2>
+      <div id="modal-article-meta" class="meta-row" style="margin-block: 0.5rem 1rem;"></div>
+      <div id="modal-article-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sol y Sombra Editorial. Celebrating artisanal millinery and cultural heritage.</p>
+      <p>Formatted dynamically for your locale via standard web <code>Intl</code> APIs.</p>
+    </div>
+  </footer>
+
+  <script>
+    const ARTICLES = [
+      {
+        id: 'charro-engineering',
+        title: 'Engineered for the High Sun: How the Sombrero de Charro Perfected Shade and Balance',
+        category: 'Craftsmanship',
+        author: 'Mateo Valdés',
+        publishedIso: '2026-10-28',
+        brimCm: 15,
+        excerpt: 'How high-crown convective cooling and dense rabbit-felt or palm weaves adapted to equestrian life on the Mexican plateau.',
+        body: [
+          'The word sombrero derives directly from sombra—Spanish for shade. Yet shade is only half of the thermal equation in arid high-altitude plateaus.',
+          'By raising the copa (crown) several centimeters above the skull and piercing it with subtle ventilation eyelets, traditional hatters created a chimney effect that keeps the head cool even under midday radiation.',
+          'Meanwhile, the wide ala protects not only the face and neck, but also the rider’s shoulders, acting as a wearable parasol balanced against crosswinds by its upturned flange.'
+        ]
+      },
+      {
+        id: 'tierra-caliente-calentano',
+        title: 'The Sombrero Calentano of Michoacán & Guerrero: 80-Strand Palm Braiding',
+        category: 'Regional Styles',
+        author: 'Elena Ríos',
+        publishedIso: '2026-10-14',
+        brimCm: 11,
+        excerpt: 'Inside the workshops of Tlapehuala, where artisans braid fine real palm strips into featherweight hats finished with black velvet ribbons.',
+        body: [
+          'In the Balsas River basin known as Tierra Caliente, heat demands a lighter structure than heavy wool felt. The answer is the Sombrero Calentano, recognizable by its crisp white crown and contrasting dark ribbon.',
+          'Master weavers select young palm fronds dried in the sun, splitting them into paper-thin strands before braiding twists of up to 80 or 100 threads per band.',
+          'Once sewn in concentric spirals, the hat is pressed in heated molds and bleached naturally to reflect solar glare.'
+        ]
+      },
+      {
+        id: 'bordado-oro-plata',
+        title: 'Gold, Silver, and Gamuza: The Art of Charro Embroidery',
+        category: 'Craftsmanship',
+        author: 'Carlos Mondragón',
+        publishedIso: '2026-09-29',
+        brimCm: 16,
+        excerpt: 'Tracing the floral and geometric calado motifs stitched in metallic bullion thread and suede across ceremonial charro sombreros.',
+        body: [
+          'Ceremonial sombreros worn in charreada competitions and mariachi ensembles feature intricate bordado—embroidery executed with twisted metallic threads (canutillo) or delicate leather strips.',
+          'Each motif carries regional lineage: oak leaves, horseshoes, and scrolling acanthus vines require up to six weeks of hand-stitching through dense felt without warping the brim.',
+          'The weight of the metallic trim also serves a practical function, stabilizing the brim edge against curling over decades of use.'
+        ]
+      },
+      {
+        id: 'jipijapa-becal-caves',
+        title: 'Subterranean Weaves: Why Campeche Artisans Weave Jipijapa Hats in Limestone Caves',
+        category: 'Regional Styles',
+        author: 'Sofía Pech',
+        publishedIso: '2026-09-12',
+        brimCm: 8,
+        excerpt: 'In Bécal, Yucatán peninsula hatters descend into humid backyard caves so delicate Carludovica palm fibers stay supple under their fingers.',
+        body: [
+          'On the surface, the dry Yucatecan breeze turns jipijapa palm fibers brittle within minutes. To weave without snapping the strands, families in Bécal excavate small vaulted caves into the soft sascab limestone beneath their patios.',
+          'Inside these natural humidors, relative humidity remains steady above 80 percent, allowing weavers to split fibers into four microscopic threads and produce sombreros soft enough to roll through a ring.'
+        ]
+      },
+      {
+        id: 'saddlers-to-charros-history',
+        title: 'From Andalusian Cordobés to the Mexican Altiplano: Four Centuries of Evolution',
+        category: 'History',
+        author: 'Dr. Julián Herrera',
+        publishedIso: '2026-08-21',
+        brimCm: 14,
+        excerpt: 'How 16th-century Spanish flat-crowned hats merged with Indigenous palm-weaving mastery to birth a distinctly Mexican silhouette.',
+        body: [
+          'When Spanish riders arrived in New Spain wearing low-crowned hats inspired by the Andalusian cordobés, they quickly encountered harsher UV exposure and torrential summer rains.',
+          'Indigenous weavers in Puebla, Oaxaca, and Michoacán applied pre-Hispanic basketry techniques using local soyate and ixtle fibers, gradually widening the brim and elevating the crown into the silhouettes documented by 19th-century lithographers.'
+        ]
+      },
+      {
+        id: 'sombrero-vueltiao-colombia',
+        title: 'Caña Flecha & Encoded Geometry: Colombia’s Sombrero Vueltiao',
+        category: 'History',
+        author: 'Lucía Mendoza',
+        publishedIso: '2026-08-03',
+        brimCm: 9,
+        excerpt: 'Reading the black-and-cream Zenú pictographs braided into the Caribbean coast’s most iconic flexible sombrero.',
+        body: [
+          'Across the Sinú River valley in Colombia, the Zenú people craft the Sombrero Vueltiao from caña flecha grass dyed pitch-black in organic mud and jagua fruit.',
+          'Each braided strip—ranging from 15 to 27 pairs of fibers (pintas)—depicts local flora, fauna, and cosmology in binary geometric patterns, uniting mathematical precision with breathable tropical comfort.'
+        ]
+      }
+    ];
+
+    // Locale-aware formatters (i18n best practice)
+    const dateFormatter = new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' });
+    const unitFormatter = new Intl.NumberFormat(undefined, {
+      style: 'unit',
+      unit: 'centimeter',
+      unitDisplay: 'short'
+    });
+
+    function formatIsoDate(isoStr) {
+      const [year, month, day] = isoStr.split('-').map(Number);
+      return dateFormatter.format(new Date(year, month - 1, day));
+    }
+
+    // Initialize Hero localized date & unit
+    document.getElementById('hero-date').textContent = formatIsoDate('2026-10-28');
+    document.getElementById('hero-brim-spec').textContent = `Brim: ${unitFormatter.format(15)}`;
+
+    const gridContainer = document.getElementById('articles-grid-container');
+    const searchInput = document.getElementById('article-search-input');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let activeCategory = 'All';
+
+    function renderArticles() {
+      const query = searchInput.value.trim().toLowerCase();
+      gridContainer.innerHTML = '';
+
+      const filtered = ARTICLES.filter((article) => {
+        const matchesCat = activeCategory === 'All' || article.category === activeCategory;
+        const matchesQuery =
+          !query ||
+          article.title.toLowerCase().includes(query) ||
+          article.excerpt.toLowerCase().includes(query) ||
+          article.category.toLowerCase().includes(query);
+        return matchesCat && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        const emptyMsg = document.createElement('p');
+        emptyMsg.textContent = 'No articles match your current filter or search term.';
+        emptyMsg.style.color = 'var(--text-secondary)';
+        gridContainer.appendChild(emptyMsg);
+        return;
+      }
+
+      filtered.forEach((article) => {
+        const card = document.createElement('article');
+        card.className = 'article-card';
+        card.id = `card-${article.id}`;
+
+        card.innerHTML = `
+          <div class="card-banner" aria-hidden="true">
+            <svg width="140" height="70" viewBox="0 0 180 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M62 56 C65 20, 76 12, 90 12 C104 12, 115 20, 118 56 Z" fill="#D4943A" opacity="0.85"/>
+              <path d="M12 58 C30 74, 150 74, 168 58 C172 54, 156 50, 118 55 L62 55 C24 50, 8 54, 12 58 Z" fill="#B84A27"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="category-label">${article.category}</span>
+            <h2 class="card-title">${article.title}</h2>
+            <p class="card-excerpt">${article.excerpt}</p>
+            <div class="card-footer">
+              <span><time datetime="${article.publishedIso}">${formatIsoDate(article.publishedIso)}</time> &bull; ${unitFormatter.format(article.brimCm)} brim</span>
+              <button type="button" class="read-more-btn" id="read-btn-${article.id}" data-article-id="${article.id}">
+                Read &rarr;
+              </button>
+            </div>
+          </div>
+        `;
+        gridContainer.appendChild(card);
+      });
+    }
+
+    // Category filter buttons
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activeCategory = btn.dataset.category;
+        filterButtons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        renderArticles();
+      });
+    });
+
+    // Top navigation category links
+    document.querySelectorAll('[data-filter]').forEach((navLink) => {
+      navLink.addEventListener('click', () => {
+        const targetCategory = navLink.dataset.filter;
+        activeCategory = targetCategory;
+        filterButtons.forEach((b) => {
+          b.setAttribute('aria-pressed', String(b.dataset.category === targetCategory));
+        });
+        renderArticles();
+      });
+    });
+
+    searchInput.addEventListener('input', renderArticles);
+
+    // Modal Reader handling
+    const modal = document.getElementById('article-reader-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    function openArticleModal(articleId) {
+      const article = ARTICLES.find((a) => a.id === articleId);
+      if (!article) return;
+
+      document.getElementById('modal-article-category').textContent = article.category;
+      document.getElementById('modal-article-title').textContent = article.title;
+      document.getElementById('modal-article-meta').textContent =
+        `By ${article.author} • ${formatIsoDate(article.publishedIso)} • Brim span: ${unitFormatter.format(article.brimCm)}`;
+
+      const bodyContainer = document.getElementById('modal-article-body');
+      bodyContainer.innerHTML = '';
+      article.body.forEach((paragraph) => {
+        const p = document.createElement('p');
+        p.textContent = paragraph;
+        bodyContainer.appendChild(p);
+      });
+
+      modal.setAttribute('aria-hidden', 'false');
+      modalCloseBtn.focus();
+    }
+
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('[data-article-id]');
+      if (trigger) {
+        openArticleModal(trigger.dataset.articleId);
+      }
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+      modal.setAttribute('aria-hidden', 'true');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    // Newsletter form handler
+    document.getElementById('newsletter-signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById('newsletter-email-input');
+      const feedback = document.getElementById('newsletter-feedback-msg');
+      feedback.textContent = `Gracias! Dispatches will be sent to ${emailInput.value}.`;
+      emailInput.value = '';
+    });
+
+    renderArticles();
+  </script>
+</body>
+</html>
