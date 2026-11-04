@@ -1,8 +1,690 @@
-      <nav aria-label="Primary Navigation">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regional Sombrero Atlas &amp; Sizing Guide | Sol y Sombra</title>
+  <meta name="description" content="Interactive regional atlas comparing traditional Mexican and Colombian sombreros, palm weave densities, and custom crown sizing.">
+
+  <!-- Google Fonts: Fraunces (Editorial Serif) & Plus Jakarta Sans (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-canvas: #f6f1e9;
+      --bg-surface: #ffffff;
+      --bg-espresso: #231b17;
+      --bg-espresso-card: #2f2520;
+      --bg-subtle: #ebe3d6;
+      --text-primary: #1f1a17;
+      --text-secondary: #5c5149;
+      --text-muted: #85776c;
+      --text-on-dark: #faf6f0;
+      --accent-terracotta: #b84a27;
+      --accent-terracotta-hover: #96391b;
+      --accent-ochre: #e09f3e;
+      --border-hairline: #dfd4c3;
+      --shadow-card: 0 4px 20px -2px rgba(31, 26, 23, 0.07), 0 1px 4px -1px rgba(31, 26, 23, 0.04);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-width: 1180px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      inset-block-start: -100px;
+      inset-inline-start: 1rem;
+      background: var(--accent-terracotta);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      inset-block-start: 1rem;
+    }
+
+    /* Distinct Dark Espresso Top Bar for Atlas Page */
+    .atlas-header {
+      background-color: var(--bg-espresso);
+      color: var(--text-on-dark);
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 100;
+      border-block-end: 1px solid rgba(250, 246, 240, 0.12);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-block: 1rem;
+      padding-inline: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      background-color: var(--accent-terracotta);
+      color: #ffffff;
+      padding-block: 0.55rem;
+      padding-inline: 1.1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: var(--accent-terracotta-hover);
+      transform: translateX(-2px);
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--text-on-dark);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-ochre);
+      margin-block-start: 0.15rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: rgba(250, 246, 240, 0.82);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.18s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-ochre);
+    }
+
+    /* Dark Banner Hero */
+    .atlas-hero-banner {
+      background-color: var(--bg-espresso-card);
+      color: var(--text-on-dark);
+      padding-block: 3rem 2.75rem;
+      border-block-end: 3px solid var(--accent-terracotta);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+    }
+
+    .breadcrumb-row {
+      margin-block-end: 1rem;
+    }
+
+    .breadcrumb-link {
+      color: var(--accent-ochre);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .breadcrumb-link:hover {
+      text-decoration: underline;
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.85rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-block-end: 0.85rem;
+    }
+
+    .page-lead {
+      max-width: 740px;
+      font-size: 1.0625rem;
+      color: rgba(250, 246, 240, 0.84);
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding-block: 2.75rem;
+      border-block-end: 1px solid var(--border-hairline);
+    }
+
+    .section-header {
+      margin-block-end: 1.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin-block-start: 0.25rem;
+    }
+
+    /* Regional Comparison Table */
+    .table-scroll {
+      overflow-x: auto;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+    }
+
+    .atlas-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: start;
+      font-size: 0.925rem;
+    }
+
+    .atlas-table th,
+    .atlas-table td {
+      padding-block: 1rem;
+      padding-inline: 1.25rem;
+      border-block-end: 1px solid var(--border-hairline);
+    }
+
+    .atlas-table th {
+      background-color: var(--bg-subtle);
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .atlas-table tbody tr:last-child td {
+      border-block-end: none;
+    }
+
+    .atlas-table tbody tr:hover {
+      background-color: #fdfbf8;
+    }
+
+    /* Interactive Sizing & Care Grid */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .panel-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .calc-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-block-start: 1rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .range-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .range-input {
+      flex: 1;
+      accent-color: var(--accent-terracotta);
+    }
+
+    .select-input {
+      padding: 0.6rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-hairline);
+      background-color: var(--bg-canvas);
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+    }
+
+    .calc-result {
+      margin-block-start: 1.25rem;
+      padding: 1.25rem;
+      background-color: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      border-inline-start: 4px solid var(--accent-terracotta);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    .metric-value {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-block-start: 0.15rem;
+    }
+
+    .care-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-block-start: 1rem;
+    }
+
+    .care-item {
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-canvas);
+      padding: 0.9rem 1.15rem;
+    }
+
+    .care-item summary {
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    .care-item p {
+      margin-block-start: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .bottom-return-banner {
+      padding-block: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .site-footer {
+      background-color: var(--bg-espresso);
+      color: rgba(250, 246, 240, 0.78);
+      padding-block: 2rem;
+      font-size: 0.875rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (max-width: 860px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link" id="skip-to-atlas-content">Skip to main content</a>
+
+  <header class="atlas-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-home-btn" id="header-back-to-index-btn">
+        &larr; Back to Editorial Journal (index.html)
+      </a>
+
+      <a href="index.html" class="brand" id="atlas-brand-home-link">
+        <span class="brand-title">Sol y Sombra</span>
+        <span class="brand-subtitle">Page 2 &bull; Regional Atlas &amp; Sizing</span>
+      </a>
+
+      <nav aria-label="Atlas Page Navigation">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link" id="nav-page-journal" aria-current="page">Editorial Journal</a></li>
-          <li><a href="atlas.html" class="nav-link" id="nav-page-atlas">Regional Atlas &amp; Sizing</a></li>
-          <li><a href="#articles-section" class="nav-link" id="nav-craft-link" data-filter="Craftsmanship">Craftsmanship</a></li>
-          <li><a href="#anatomy-glossary" class="nav-link" id="nav-glossary-link">Anatomy</a></li>
+          <li><a href="#regional-table-heading" class="nav-link" id="nav-jump-table">Regional Table</a></li>
+          <li><a href="#sizing-calculator-section" class="nav-link" id="nav-jump-calculator">Sizing Calculator</a></li>
+          <li><a href="#preservation-guide-section" class="nav-link" id="nav-jump-care">Care Guide</a></li>
         </ul>
       </nav>
+    </div>
+  </header>
+
+  <section class="atlas-hero-banner" aria-labelledby="atlas-page-heading">
+    <div class="container">
+      <div class="breadcrumb-row">
+        <a href="index.html" class="breadcrumb-link" id="breadcrumb-back-index-link">&larr; Return to Home Page (index.html)</a>
+      </div>
+      <h1 id="atlas-page-heading" class="page-title">Regional Sombrero Atlas &amp; Hatter’s Sizing Guide</h1>
+      <p class="page-lead">
+        A dedicated technical companion to the Sol y Sombra journal. Compare traditional regional weaves across Mexico and Colombia, calculate your exact crown measurement (<em>talla</em>), and learn workshop preservation methods.
+      </p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container">
+    <!-- Regional Styles Comparison Table -->
+    <section class="content-section" aria-labelledby="regional-table-heading">
+      <div class="section-header">
+        <h2 id="regional-table-heading" class="section-title">Comparative Regional Traditions</h2>
+        <p class="section-subtitle">Specifications of five foundational sombrero silhouettes, fibers, and regional origins.</p>
+      </div>
+
+      <div class="table-scroll">
+        <table class="atlas-table" id="regional-sombreros-table">
+          <thead>
+            <tr>
+              <th scope="col">Sombrero Tradition</th>
+              <th scope="col">Origin Region</th>
+              <th scope="col">Primary Fiber / Material</th>
+              <th scope="col">Typical Brim Span</th>
+              <th scope="col">Ideal Climate &amp; Use</th>
+            </tr>
+          </thead>
+          <tbody id="atlas-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sizing Calculator + Care Guide -->
+    <section class="content-section" id="sizing-calculator-section" aria-labelledby="calculator-heading">
+      <div class="two-col-grid">
+        <div class="panel-card">
+          <h2 id="calculator-heading" class="section-title">Crown Fit &amp; Brim Proportion Calculator</h2>
+          <p class="section-subtitle">
+            Measure around your head approximately 1.5 cm above your eyebrows to find your traditional <em>talla</em> and recommended brim geometry.
+          </p>
+
+          <form id="hat-sizing-form" class="calc-form">
+            <div class="form-field">
+              <label for="head-circumference-range">Head Circumference</label>
+              <div class="range-row">
+                <input
+                  type="range"
+                  id="head-circumference-range"
+                  class="range-input"
+                  min="54"
+                  max="63"
+                  step="1"
+                  value="58"
+                >
+                <output id="head-circumference-output" for="head-circumference-range" style="font-weight: 700; min-width: 110px; text-align: end;"></output>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="purpose-select">Primary Environment / Activity</label>
+              <select id="purpose-select" class="select-input">
+                <option value="equestrian">Equestrian &amp; High Plateau (Charreada)</option>
+                <option value="tropical">Tropical Sun &amp; Humid Lowlands</option>
+                <option value="ceremonial">Ceremonial &amp; Gala Mariachi</option>
+                <option value="travel">Everyday Walking &amp; Travel</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="calc-result" aria-live="polite">
+            <div>
+              <div class="metric-label">Mexican Talla</div>
+              <div id="result-talla" class="metric-value">58 (Medium)</div>
+            </div>
+            <div>
+              <div class="metric-label">US / UK Hat Size</div>
+              <div id="result-us-size" class="metric-value">7 &frac14;</div>
+            </div>
+            <div>
+              <div class="metric-label">Recommended Brim</div>
+              <div id="result-brim-span" class="metric-value">15 cm</div>
+            </div>
+            <div>
+              <div class="metric-label">Suggested Style</div>
+              <div id="result-style-name" class="metric-value" style="font-size: 1.05rem;">Charro de Fieltro</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-card" id="preservation-guide-section">
+          <h2 class="section-title">Preservation &amp; Workshop Care</h2>
+          <p class="section-subtitle">
+            How to preserve crown symmetry and prevent brim warping across decades of wear.
+          </p>
+
+          <div class="care-list">
+            <details class="care-item" id="care-detail-resting" open>
+              <summary>1. Always Rest a Sombrero on Its Crown (Copa)</summary>
+              <p>
+                Setting a wide-brimmed sombrero flat on a table slowly flattens the upturned rear curve of the <em>ala</em>. Invert the hat so it rests on its crown or suspend it on a padded wooden peg.
+              </p>
+            </details>
+
+            <details class="care-item" id="care-detail-felt">
+              <summary>2. Brushing Rabbit-Hare Felt Counterclockwise</summary>
+              <p>
+                Use a soft horsehair brush in a counterclockwise direction following the nap of the felt. For embroidered <em>bordado</em> hats, use a dry camel-hair brush to lift dust from metallic threads without snagging.
+              </p>
+            </details>
+
+            <details class="care-item" id="care-detail-palm">
+              <summary>3. Hydrating Fine Jipijapa &amp; Calentano Palm</summary>
+              <p>
+                In dry climates or heated interiors, natural palm fibers lose moisture and can crack along the crown pinch. Place the sombrero in a steamy bathroom for 15 minutes once a season to keep the fibers supple.
+              </p>
+            </details>
+
+            <details class="care-item" id="care-detail-rain">
+              <summary>4. Drying After Rain Without Heat</summary>
+              <p>
+                If caught in a downpour, fold down the inner leather sweatband (<em>tafilete</em>) so air circulates inside, and let it dry in indirect shade. Never use a hairdryer, which shrinks the leather band.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-return-banner">
+      <div>
+        <h2 class="section-title" style="font-size: 1.3rem;">Ready to return to the essays?</h2>
+        <p class="section-subtitle">Head back to the main editorial page for stories on charro embroidery, cave weaving, and history.</p>
+      </div>
+      <a href="index.html" class="back-home-btn" id="bottom-back-to-index-btn">
+        &larr; Back to Home Page (index.html)
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sol y Sombra Editorial &bull; Regional Atlas &amp; Sizing Guide</p>
+      <p><a href="index.html" id="footer-return-journal-link" style="color: var(--accent-ochre); font-weight: 600;">&larr; Return to index.html</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const REGIONAL_STYLES = [
+      {
+        name: 'Sombrero de Charro',
+        region: 'Jalisco & El Bajío, Mexico',
+        material: 'Pressed wool, hare felt, or woven soyate palm',
+        brimCm: 15,
+        climate: 'High-altitude arid sun; equestrian wind stability'
+      },
+      {
+        name: 'Sombrero Calentano',
+        region: 'Tlapehuala, Guerrero & Michoacán',
+        material: '80-to-100 strand braided real palm (palma real)',
+        brimCm: 11,
+        climate: 'Intense dry heat of the Balsas River basin'
+      },
+      {
+        name: 'Sombrero de Jipijapa',
+        region: 'Bécal, Campeche, Mexico',
+        material: 'Subterranean-woven Carludovica palm shoots',
+        brimCm: 8.5,
+        climate: 'Humid tropical coast; rollable travel shade'
+      },
+      {
+        name: 'Sombrero Poblano / Chinaco',
+        region: 'Tehuacán, Puebla, Mexico',
+        material: 'Stiffened palm or charcoal-dyed felt, flat crown',
+        brimCm: 12.5,
+        climate: 'Temperate mountain valleys & sierra trails'
+      },
+      {
+        name: 'Sombrero Vueltiao',
+        region: 'Sinú River Valley, Colombia',
+        material: 'Mud-dyed caña flecha grass (19 to 27 pintas)',
+        brimCm: 9.5,
+        climate: 'Caribbean tropical heat & monsoon humidity'
+      }
+    ];
+
+    const cmFormatter = new Intl.NumberFormat(undefined, {
+      style: 'unit',
+      unit: 'centimeter',
+      unitDisplay: 'short',
+      maximumFractionDigits: 1
+    });
+
+    const inchFormatter = new Intl.NumberFormat(undefined, {
+      style: 'unit',
+      unit: 'inch',
+      unitDisplay: 'short',
+      maximumFractionDigits: 1
+    });
+
+    function formatDualLength(cmValue) {
+      const inches = cmValue / 2.54;
+      return `${cmFormatter.format(cmValue)} (${inchFormatter.format(inches)})`;
+    }
+
+    const tableBody = document.getElementById('atlas-table-body');
+    REGIONAL_STYLES.forEach((item) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${item.name}</strong></td>
+        <td>${item.region}</td>
+        <td>${item.material}</td>
+        <td>${formatDualLength(item.brimCm)}</td>
+        <td>${item.climate}</td>
+      `;
+      tableBody.appendChild(tr);
+    });
+
+    const rangeInput = document.getElementById('head-circumference-range');
+    const circumferenceOutput = document.getElementById('head-circumference-output');
+    const purposeSelect = document.getElementById('purpose-select');
+
+    const US_SIZES = {
+      54: '6 ¾',
+      55: '6 ⅞',
+      56: '7',
+      57: '7 ⅛',
+      58: '7 ¼',
+      59: '7 ⅜',
+      60: '7 ½',
+      61: '7 ⅝',
+      62: '7 ¾',
+      63: '7 ⅞'
+    };
+
+    const PURPOSE_RECOMMENDATIONS = {
+      equestrian: { brimCm: 15, style: 'Charro de Fieltro' },
+      tropical: { brimCm: 11, style: 'Calentano 100-Vueltas' },
+      ceremonial: { brimCm: 16.5, style: 'Charro Galoneado' },
+      travel: { brimCm: 8.5, style: 'Jipijapa de Bécal' }
+    };
+
+    function getSizeLabel(cm) {
+      if (cm <= 55) return 'Small (Chico)';
+      if (cm <= 57) return 'Medium (Mediano)';
+      if (cm <= 59) return 'Large (Grande)';
+      return 'Extra Large (Extra Grande)';
+    }
+
+    function updateSizingCalculator() {
+      const cm = Number(rangeInput.value);
+      const purpose = purposeSelect.value;
+      const rec = PURPOSE_RECOMMENDATIONS[purpose];
+
+      circumferenceOutput.textContent = formatDualLength(cm);
+      document.getElementById('result-talla').textContent = `${cm} • ${getSizeLabel(cm)}`;
+      document.getElementById('result-us-size').textContent = US_SIZES[cm] || '7 ¼';
+      document.getElementById('result-brim-span').textContent = formatDualLength(rec.brimCm);
+      document.getElementById('result-style-name').textContent = rec.style;
+    }
+
+    rangeInput.addEventListener('input', updateSizingCalculator);
+    purposeSelect.addEventListener('change', updateSizingCalculator);
+    updateSizingCalculator();
+  </script>
+</body>
+</html>
