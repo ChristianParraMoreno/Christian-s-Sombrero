@@ -1,72 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
     <title>Sol y Sombra | The History, Craft &amp; Culture of the Sombrero</title>
-    <link>https://christianparramoreno.github.io/Christian-s-Sombrero/</link>
+    <link>./index.html</link>
     <description>An editorial journal exploring the craftsmanship, regional traditions, weave patterns, and cultural heritage of traditional sombreros across Mexico and Latin America.</description>
-    <language>en</language>
-
-    <!-- Page 2: Regional Atlas & Sizing Guide -->
+    <language>en-us</language>
     <item>
       <title>Regional Sombrero Atlas &amp; Hatter’s Sizing Guide</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/atlas.html</link>
+      <link>./atlas.html</link>
       <description>Interactive regional atlas comparing traditional Mexican and Colombian sombreros, palm weave densities, custom crown sizing (talla), and workshop preservation methods.</description>
-      <category>Reference &amp; Sizing Guide</category>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
     </item>
-
-    <!-- Article 1 -->
     <item>
       <title>Engineered for the High Sun: How the Sombrero de Charro Perfected Shade and Balance</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-charro-engineering</link>
+      <link>./index.html</link>
       <description>How high-crown convective cooling and dense rabbit-felt or palm weaves adapted to equestrian life on the Mexican plateau.</description>
-      <category>Craftsmanship</category>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <!-- Article 2 -->
-    <item>
-      <title>The Sombrero Calentano of Michoacán &amp; Guerrero: 80-Strand Palm Braiding</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-tierra-caliente-calentano</link>
-      <description>Inside the workshops of Tlapehuala, where artisans braid fine real palm strips into featherweight hats finished with black velvet ribbons.</description>
-      <category>Regional Styles</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <!-- Article 3 -->
-    <item>
-      <title>Gold, Silver, and Gamuza: The Art of Charro Embroidery</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-bordado-oro-plata</link>
-      <description>Tracing the floral and geometric calado motifs stitched in metallic bullion thread and suede across ceremonial charro sombreros.</description>
-      <category>Craftsmanship</category>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <!-- Article 4 -->
-    <item>
-      <title>Subterranean Weaves: Why Campeche Artisans Weave Jipijapa Hats in Limestone Caves</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-jipijapa-becal-caves</link>
-      <description>In Bécal, Yucatán peninsula hatters descend into humid backyard caves so delicate Carludovica palm fibers stay supple under their fingers.</description>
-      <category>Regional Styles</category>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <!-- Article 5 -->
-    <item>
-      <title>From Andalusian Cordobés to the Mexican Altiplano: Four Centuries of Evolution</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-saddlers-to-charros-history</link>
-      <description>How 16th-century Spanish flat-crowned hats merged with Indigenous palm-weaving mastery to birth a distinctly Mexican silhouette.</description>
-      <category>History</category>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <!-- Article 6 -->
-    <item>
-      <title>Caña Flecha &amp; Encoded Geometry: Colombia’s Sombrero Vueltiao</title>
-      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-sombrero-vueltiao-colombia</link>
-      <description>Reading the black-and-cream Zenú pictographs braided into the Caribbean coast’s most iconic flexible sombrero.</description>
-      <category>History</category>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 28 Oct 2026 14:30:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
