@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  
-    <link rel="alternate" type="application/rss+xml" title="Sol y Sombra | RSS Feed" href="rss.xml">
-    <!-- Google tag (gtag.js) -->
+  <link rel="alternate" type="application/rss+xml" title="Sol y Sombra | RSS Feed" href="rss.xml">
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024142456"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
-  
+
     gtag('config', 'AW-18024142456');
   </script>
 
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sol y Sombra | The History, Craft &amp; Culture of the Sombrero</title>
@@ -156,6 +153,25 @@
 
     .nav-cta-page:hover {
       background-color: var(--accent-terracotta);
+      transform: translateY(-1px);
+    }
+
+    .rss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-terracotta);
+      color: #ffffff;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .rss-btn:hover {
+      background-color: var(--accent-terracotta-hover);
       transform: translateY(-1px);
     }
 
@@ -585,7 +601,17 @@
           <li><a href="index.html" class="nav-link" id="nav-home-link" aria-current="page">Editorial Journal</a></li>
           <li><a href="#articles-section" class="nav-link" id="nav-craft-link" data-filter="Craftsmanship">Craftsmanship</a></li>
           <li><a href="#anatomy-glossary" class="nav-link" id="nav-glossary-link">Anatomy</a></li>
+          <li><a href="rss.xml" class="nav-link" id="nav-rss-link">RSS Feed</a></li>
           <li><a href="atlas.html" class="nav-cta-page" id="nav-atlas-page-btn">Regional Atlas &amp; Sizing &rarr;</a></li>
+          <li>
+            <a class="rss-btn" href="rss.xml" id="header-rss-btn" title="Subscribe to RSS Feed">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <circle cx="6.18" cy="17.82" r="2.18"/>
+                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+              </svg>
+              Subscribe via RSS
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -716,8 +742,13 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Sol y Sombra Editorial. Celebrating artisanal millinery and cultural heritage.</p>
-      <p><a href="atlas.html" id="footer-atlas-link" style="color: var(--accent-terracotta); font-weight: 600;">Explore Page 2: Regional Atlas &amp; Sizing Guide &rarr;</a></p>
+      <p>&copy; 2026 Sol y Sombra Editorial. Celebrating artisanal millinery and cultural heritage. Want updates when a new essay is published? <a href="rss.xml" style="color: var(--accent-terracotta); font-weight: 600;">Subscribe to the RSS Feed</a>.</p>
+      <p>
+        <a href="index.html" style="color: var(--text-secondary); font-weight: 600;">Home</a> &bull;
+        <a href="atlas.html" id="footer-atlas-link" style="color: var(--accent-terracotta); font-weight: 600;">Explore Page 2: Regional Atlas &amp; Sizing Guide &rarr;</a> &bull;
+        <a href="rss.xml" id="footer-rss-link" style="color: var(--text-secondary); font-weight: 600;">RSS Feed</a> &bull;
+        <a href="robots.txt" style="color: var(--text-secondary);">robots.txt</a>
+      </p>
     </div>
   </footer>
 
