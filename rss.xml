@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sol y Sombra | The History, Craft &amp; Culture of the Sombrero</title>
+    <link>https://christianparramoreno.github.io/Christian-s-Sombrero/</link>
+    <description>An editorial journal exploring the craftsmanship, regional traditions, weave patterns, and cultural heritage of traditional sombreros across Mexico and Latin America.</description>
+    <language>en</language>
+    <copyright>Copyright 2026 Sol y Sombra Editorial. Celebrating artisanal millinery and cultural heritage.</copyright>
+    <lastBuildDate>Thu, 05 Nov 2026 22:21:38 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+    <atom:link href="https://christianparramoreno.github.io/Christian-s-Sombrero/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Regional Sombrero Atlas &amp; Hatter’s Sizing Guide</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/atlas.html</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/atlas.html</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Sol y Sombra Editorial</dc:creator>
+      <category>Reference &amp; Sizing Guide</category>
+      <description>Interactive regional atlas comparing traditional Mexican and Colombian sombreros, palm weave densities, custom crown sizing (talla), and workshop preservation methods.</description>
+      <content:encoded><![CDATA[
+        <p>A dedicated technical companion to the Sol y Sombra journal. Compare five foundational regional sombrero traditions across Mexico and Colombia (Sombrero de Charro, Sombrero Calentano, Sombrero de Jipijapa, Sombrero Poblano / Chinaco, and Sombrero Vueltiao), calculate your exact crown measurement (<em>talla</em>) and recommended brim span, and learn workshop preservation methods.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Engineered for the High Sun: How the Sombrero de Charro Perfected Shade and Balance</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-charro-engineering</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-charro-engineering</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Mateo Valdés</dc:creator>
+      <category>Craftsmanship</category>
+      <description>How high-crown convective cooling and dense rabbit-felt or palm weaves adapted to equestrian life on the Mexican plateau.</description>
+      <content:encoded><![CDATA[
+        <p>The word sombrero derives directly from <em>sombra</em>—Spanish for shade. Yet shade is only half of the thermal equation in arid high-altitude plateaus.</p>
+        <p>By raising the <em>copa</em> (crown) several centimeters above the skull and piercing it with subtle ventilation eyelets, traditional hatters created a chimney effect that keeps the head cool even under midday radiation.</p>
+        <p>Meanwhile, the wide <em>ala</em> (15 cm brim) protects not only the face and neck, but also the rider’s shoulders, acting as a wearable parasol balanced against crosswinds by its upturned flange.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>The Sombrero Calentano of Michoacán &amp; Guerrero: 80-Strand Palm Braiding</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-tierra-caliente-calentano</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-tierra-caliente-calentano</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Elena Ríos</dc:creator>
+      <category>Regional Styles</category>
+      <description>Inside the workshops of Tlapehuala, where artisans braid fine real palm strips into featherweight hats finished with black velvet ribbons.</description>
+      <content:encoded><![CDATA[
+        <p>In the Balsas River basin known as Tierra Caliente, heat demands a lighter structure than heavy wool felt. The answer is the Sombrero Calentano, recognizable by its crisp white crown and contrasting dark ribbon.</p>
+        <p>Master weavers select young palm fronds dried in the sun, splitting them into paper-thin strands before braiding twists of up to 80 or 100 threads per band.</p>
+        <p>Once sewn in concentric spirals, the hat (11 cm brim) is pressed in heated molds and bleached naturally to reflect solar glare.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Gold, Silver, and Gamuza: The Art of Charro Embroidery</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-bordado-oro-plata</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-bordado-oro-plata</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Carlos Mondragón</dc:creator>
+      <category>Craftsmanship</category>
+      <description>Tracing the floral and geometric calado motifs stitched in metallic bullion thread and suede across ceremonial charro sombreros.</description>
+      <content:encoded><![CDATA[
+        <p>Ceremonial sombreros worn in charreada competitions and mariachi ensembles feature intricate <em>bordado</em>—embroidery executed with twisted metallic threads (<em>canutillo</em>) or delicate leather strips.</p>
+        <p>Each motif carries regional lineage: oak leaves, horseshoes, and scrolling acanthus vines require up to six weeks of hand-stitching through dense felt without warping the 16 cm brim.</p>
+        <p>The weight of the metallic trim also serves a practical function, stabilizing the brim edge against curling over decades of use.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Subterranean Weaves: Why Campeche Artisans Weave Jipijapa Hats in Limestone Caves</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-jipijapa-becal-caves</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-jipijapa-becal-caves</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Sofía Pech</dc:creator>
+      <category>Regional Styles</category>
+      <description>In Bécal, Yucatán peninsula hatters descend into humid backyard caves so delicate Carludovica palm fibers stay supple under their fingers.</description>
+      <content:encoded><![CDATA[
+        <p>On the surface, the dry Yucatecan breeze turns jipijapa palm fibers brittle within minutes. To weave without snapping the strands, families in Bécal excavate small vaulted caves into the soft <em>sascab</em> limestone beneath their patios.</p>
+        <p>Inside these natural humidors, relative humidity remains steady above 80 percent, allowing weavers to split fibers into four microscopic threads and produce sombreros (8 cm brim) soft enough to roll through a ring.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>From Andalusian Cordobés to the Mexican Altiplano: Four Centuries of Evolution</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-saddlers-to-charros-history</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-saddlers-to-charros-history</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Dr. Julián Herrera</dc:creator>
+      <category>History</category>
+      <description>How 16th-century Spanish flat-crowned hats merged with Indigenous palm-weaving mastery to birth a distinctly Mexican silhouette.</description>
+      <content:encoded><![CDATA[
+        <p>When Spanish riders arrived in New Spain wearing low-crowned hats inspired by the Andalusian <em>cordobés</em>, they quickly encountered harsher UV exposure and torrential summer rains.</p>
+        <p>Indigenous weavers in Puebla, Oaxaca, and Michoacán applied pre-Hispanic basketry techniques using local <em>soyate</em> and <em>ixtle</em> fibers, gradually widening the brim (14 cm) and elevating the crown into the silhouettes documented by 19th-century lithographers.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Caña Flecha &amp; Encoded Geometry: Colombia’s Sombrero Vueltiao</title>
+      <link>https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-sombrero-vueltiao-colombia</link>
+      <guid isPermaLink="true">https://christianparramoreno.github.io/Christian-s-Sombrero/index.html#card-sombrero-vueltiao-colombia</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lucía Mendoza</dc:creator>
+      <category>History</category>
+      <description>Reading the black-and-cream Zenú pictographs braided into the Caribbean coast’s most iconic flexible sombrero.</description>
+      <content:encoded><![CDATA[
+        <p>Across the Sinú River valley in Colombia, the Zenú people craft the Sombrero Vueltiao from <em>caña flecha</em> grass dyed pitch-black in organic mud and jagua fruit.</p>
+        <p>Each braided strip—ranging from 15 to 27 pairs of fibers (<em>pintas</em>)—depicts local flora, fauna, and cosmology in binary geometric patterns, uniting mathematical precision with breathable tropical comfort (9 cm brim).</p>
+      ]]></content:encoded>
+    </item>
+  </channel>
+</rss>
