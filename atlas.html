@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regional Sombrero Atlas &amp; Sizing Guide | Sol y Sombra</title>
   <meta name="description" content="Interactive regional atlas comparing traditional Mexican and Colombian sombreros, palm weave densities, and custom crown sizing.">
+  <link rel="alternate" type="application/rss+xml" title="Sol y Sombra | RSS Feed" href="rss.xml">
 
   <!-- Google Fonts: Fraunces (Editorial Serif) & Plus Jakarta Sans (Clean Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,6 +106,25 @@
     .back-home-btn:hover {
       background-color: var(--accent-terracotta-hover);
       transform: translateX(-2px);
+    }
+
+    .rss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-terracotta);
+      color: #ffffff;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .rss-btn:hover {
+      background-color: var(--accent-terracotta-hover);
+      transform: translateY(-1px);
     }
 
     .brand {
@@ -413,6 +433,16 @@
           <li><a href="#regional-table-heading" class="nav-link" id="nav-jump-table">Regional Table</a></li>
           <li><a href="#sizing-calculator-section" class="nav-link" id="nav-jump-calculator">Sizing Calculator</a></li>
           <li><a href="#preservation-guide-section" class="nav-link" id="nav-jump-care">Care Guide</a></li>
+          <li><a href="rss.xml" class="nav-link" id="nav-atlas-rss">RSS Feed</a></li>
+          <li>
+            <a class="rss-btn" href="rss.xml" id="atlas-header-rss-btn" title="Subscribe to RSS Feed">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <circle cx="6.18" cy="17.82" r="2.18"/>
+                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+              </svg>
+              Subscribe via RSS
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -553,7 +583,7 @@
     <div class="bottom-return-banner">
       <div>
         <h2 class="section-title" style="font-size: 1.3rem;">Ready to return to the essays?</h2>
-        <p class="section-subtitle">Head back to the main editorial page for stories on charro embroidery, cave weaving, and history.</p>
+        <p class="section-subtitle">Head back to the main editorial page for stories on charro embroidery, cave weaving, and history, or <a href="rss.xml" style="color: var(--accent-terracotta); font-weight: 600;">subscribe via RSS</a>.</p>
       </div>
       <a href="index.html" class="back-home-btn" id="bottom-back-to-index-btn">
         &larr; Back to Home Page (index.html)
@@ -564,7 +594,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 Sol y Sombra Editorial &bull; Regional Atlas &amp; Sizing Guide</p>
-      <p><a href="index.html" id="footer-return-journal-link" style="color: var(--accent-ochre); font-weight: 600;">&larr; Return to index.html</a></p>
+      <p>
+        <a href="index.html" id="footer-return-journal-link" style="color: var(--accent-ochre); font-weight: 600;">&larr; Return to index.html</a> &bull;
+        <a href="atlas.html" style="color: rgba(250, 246, 240, 0.9); font-weight: 600;">Regional Atlas</a> &bull;
+        <a href="rss.xml" id="atlas-footer-rss-link" style="color: var(--accent-ochre); font-weight: 600;">RSS Feed</a> &bull;
+        <a href="robots.txt" style="color: rgba(250, 246, 240, 0.78);">robots.txt</a>
+      </p>
     </div>
   </footer>
 
