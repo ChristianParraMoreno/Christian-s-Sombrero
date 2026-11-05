@@ -1,0 +1,15 @@
+# robots.txt for GitHub Pages — Explicitly allows Googlebot
+User-agent: Googlebot
+Disallow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: *
+Disallow: /
